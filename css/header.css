@@ -1,0 +1,323 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  background: var(--primary-dark-blue-1, #142257);
+  border-bottom: 1px solid var(--primary-dark-blue-2, #1F3584);
+}
+.header .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 80px;
+}
+.header .header__container .header__contend {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header .header__container .header__contend .header-block_active {
+  display: none;
+}
+.header .header__container .header__contend .menu .menu__body .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 57px;
+     -moz-column-gap: 57px;
+          column-gap: 57px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 65px;
+  padding: 0 10px;
+  /**
+  * ----------------------------------------
+  * animation scale-up-hor-left
+  * ----------------------------------------
+  */
+}
+.header .header__container .header__contend .menu .menu__body .menu__list .menu__item {
+  position: relative;
+}
+.header .header__container .header__contend .menu .menu__body .menu__list .menu__item:hover::before {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  width: 50%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #15B2F5;
+  -webkit-animation: scale-up-hor-left 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-hor-left 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+}
+@keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+}
+.header .header__container .header__contend .header-hour {
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.header .header__container .header__contend .header-hour .header-hour__img {
+  width: 12px;
+  height: 12px;
+}
+.header .header__container .header__contend .header-hour .header-hour__text {
+  position: relative;
+  width: 150px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.header .header__container .header__contend .header-hour .header-hour__text:hover {
+  color: #15B2F5;
+}
+.header .header__container .header__contend .header-hour .header-hour__text:hover::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 3px;
+  left: 0;
+  bottom: -10px;
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-animation: scale-up-hor-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-hor-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.icon-menu {
+  display: none;
+}
+
+.header__logo-burgers {
+  display: none;
+}
+
+.header-hour-burgers {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header__logo {
+    display: none;
+  }
+  .header {
+    min-height: 70px;
+  }
+  .header .header__container .header__contend {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .header__container .header__contend .header-block_active {
+    display: inline-block;
+    width: 100%;
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .header__container .header__contend .header-hour {
+    display: none;
+  }
+  .header .header__container .header__contend .header-hour_active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+  }
+  .header .header__container .header__contend .header-hour_active .header-hour__img_active {
+    width: 12px;
+    height: 12px;
+  }
+  .header .header__container .header__contend .header-hour_active .header-hour__text_active {
+    width: 150px;
+  }
+}
+@media (max-width: 650.98px) {
+  .header {
+    min-height: 57px;
+  }
+  .header .header__container {
+    min-height: 57px;
+  }
+  .header .header__container .header__contend {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .icon-menu {
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 24px;
+    height: 20px;
+  }
+  .icon-menu__line,
+  .icon-menu::after,
+  .icon-menu::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-radius: 20px;
+    height: 0.125rem;
+    background-color: #fff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .menu-open .icon-menu {
+    margin-top: 16px;
+  }
+  .menu-open .icon-menu__line {
+    display: none;
+  }
+  .icon-menu::before {
+    top: 0;
+  }
+  .icon-menu::after {
+    bottom: 0;
+  }
+  .icon-menu__line {
+    top: calc(50% - 0.0625rem);
+  }
+  .menu-open .icon-menu__line {
+    top: calc(50% - 0.0625rem);
+  }
+  .menu-open .icon-menu::after {
+    bottom: calc(50% - 0.0625rem);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .menu-open .icon-menu::before {
+    top: calc(50% - 0.0625rem);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  /**************************************/
+  .menu__body {
+    position: fixed;
+    width: 73%;
+    height: 100%;
+    bottom: 0;
+    overflow: auto;
+    right: -100%;
+    -webkit-transition: right 0.7s;
+    transition: right 0.7s;
+    background: var(--primary-dark-blue-1, #142257);
+  }
+  .menu-open .menu__body {
+    right: 0;
+  }
+  .menu-open .header__logo-burgers {
+    display: block;
+    width: 176px;
+    z-index: 50;
+    margin: 12px 0px 17px 24px;
+  }
+  .menu-open .header-hour-burgers {
+    margin-top: 150px;
+    width: 100%;
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu-open .header-hour-burgers .header-hour__img {
+    width: 10px;
+    height: 10px;
+  }
+  .menu-open .header-hour-burgers .header-hour__text {
+    font-size: 18px;
+  }
+  /*************burger-text*************************/
+  .menu__list {
+    border-top: 1px solid var(--primary-dark-blue-2, #1F3584);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 25px;
+    min-height: 400px;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu-open .menu__link {
+    margin-bottom: 100px;
+  }
+  .menu__link:hover::after {
+    display: none;
+  }
+  .header-hour__img_active {
+    display: none;
+  }
+  .header-hour__text_active {
+    display: none;
+  }
+}
